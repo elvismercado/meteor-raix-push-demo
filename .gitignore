@@ -1,0 +1,13 @@
+config.push.ignore
+private/ios/apn-development/aps_development.cer
+private/ios/apn-development/ck.pem
+private/ios/apn-development/PushChat.certSigningRequest
+private/ios/apn-development/PushChatCert.pem
+private/ios/apn-development/PushChatKey.p12
+private/ios/apn-development/PushChatKey.pem
+private/ios/apn-production/aps_production.cer
+private/ios/apn-production/ck.pem
+private/ios/apn-production/PushChat.certSigningRequest
+private/ios/apn-production/PushChatCert.pem
+private/ios/apn-production/PushChatKey.p12
+private/ios/apn-production/PushChatKey.pem

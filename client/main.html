@@ -1,0 +1,59 @@
+<head>
+	<title>meteor raix:push demo</title>
+</head>
+
+<body>
+	{{> list}}
+</body>
+
+<template name="list">
+	{{> navbar}}
+	<div class="container">
+		{{#if currentUser}}
+		<button id="push">Send Notification</button>
+		<button id="removeHistory">Remove History</button>
+		<div class="checkbox">
+			<label>
+				<input type="checkbox" value="">hide recieved notifications
+			</label>
+		</div>
+		<hr />
+		<table>
+			<thead>
+				<tr>
+					<td>Badge#</td>
+					<td>Added at</td>
+					<td>Recieved at</td>
+				</tr>
+			</thead>
+			{{> row}}
+		</table>
+		{{else}}
+		<p>You need to be logged in</p>
+		{{/if}}
+	</div>
+	<br />
+</template>
+
+<template name="row">
+	{{#each notificationHistory}}
+		<tr>
+			<td>{{badge}}</td>
+			<td>{{addedAt}}</td>
+			<td>{{recievedAt}}</td>
+		</tr>
+	{{/each}}
+</template>
+
+<template name="navbar">
+	<nav class="navbar navbar-default navbar-static-top">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">raix:push Demo</a>
+			</div>
+			<ul class="nav navbar-nav navbar-right">
+				{{> loginButtons}}
+			</ul>
+		</div>
+	</nav>
+</template>
